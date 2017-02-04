@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.kennethlopez.testapp.R;
 import com.example.kennethlopez.testapp.view.activity.BaseActivity;
@@ -25,6 +26,7 @@ public class HomeActivity extends BaseActivity implements HomeContract.HomeView{
         ButterKnife.bind(this);
 
         mPresenter = new HomePresenterImpl(getComponent());
+        mPresenter.setView(this);
     }
 
     @Override
@@ -54,6 +56,11 @@ public class HomeActivity extends BaseActivity implements HomeContract.HomeView{
     @Override
     public void hideProgressDialog() {
         mProgressDialog.dismiss();
+    }
+
+    @Override
+    public void showToast() {
+        Toast.makeText(this, R.string.user_data_fetched_message, Toast.LENGTH_LONG).show();
     }
 
     @Bind(R.id.home_activity_button_add_user) AppCompatButton mButtonAddUser;

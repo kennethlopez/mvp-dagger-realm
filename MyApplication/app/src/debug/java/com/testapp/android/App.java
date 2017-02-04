@@ -12,8 +12,7 @@ import io.realm.RealmConfiguration;
 public class App extends Application {
     private AppComponent mAppComponent;
 
-    public App() {
-    }
+    public App() { }
 
     @Override
     public void onCreate() {

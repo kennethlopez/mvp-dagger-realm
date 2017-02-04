@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">TestApp</string>
     <string name="add_new_user_text">Add new user</string>
+    <string name="fetching_user_data_text">Fetching user data</string>
+    <string name="user_data_fetched_message">User data fetched and saved</string>
 </resources>

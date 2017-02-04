@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import com.example.kennethlopez.testapp.di.module.AppModule;
 import com.example.kennethlopez.testapp.job.FetchUserJob;
 import com.example.kennethlopez.testapp.model.UserModel;
+import com.example.kennethlopez.testapp.view.activity.home.HomePresenterImpl;
 import com.google.gson.Gson;
 import com.path.android.jobqueue.JobManager;
 
@@ -41,4 +42,6 @@ public interface AppComponent {
     void inject(FetchUserJob fetchUserJob);
 
     void inject(UserModel userModel);
+
+    void inject(HomePresenterImpl homePresenter);
 }

@@ -5,6 +5,7 @@ import com.example.kennethlopez.testapp.vo.User;
 import com.testapp.android.App;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 public class UserModel extends BaseModel {
 
@@ -20,5 +21,9 @@ public class UserModel extends BaseModel {
                 realm.copyToRealmOrUpdate(user);
             }
         });
+    }
+
+    public RealmResults<User> getAll() {
+        return mRealm.where(User.class).findAll();
     }
 }
