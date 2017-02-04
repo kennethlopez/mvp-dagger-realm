@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="YyyEditText">
+        <item name="android:textColor">#3f3f3f</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@drawable/edit_text_background_selector_rounded</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+
 </resources>

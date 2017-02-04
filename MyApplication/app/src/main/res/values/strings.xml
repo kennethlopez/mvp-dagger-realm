@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestApp</string>
+    <string name="add_new_user_text">Add new user</string>
 </resources>

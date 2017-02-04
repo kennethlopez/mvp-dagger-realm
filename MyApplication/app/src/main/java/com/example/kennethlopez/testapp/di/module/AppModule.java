@@ -8,6 +8,7 @@ import android.util.Log;
 import com.example.kennethlopez.testapp.BuildConfig;
 import com.example.kennethlopez.testapp.api.ApiService;
 import com.example.kennethlopez.testapp.job.BaseJob;
+import com.example.kennethlopez.testapp.model.UserModel;
 import com.example.kennethlopez.testapp.util.Common;
 import com.example.kennethlopez.testapp.util.L;
 import com.example.kennethlopez.testapp.util.NetworkUtil;
@@ -19,7 +20,7 @@ import com.path.android.jobqueue.Job;
 import com.path.android.jobqueue.JobManager;
 import com.path.android.jobqueue.config.Configuration;
 import com.path.android.jobqueue.di.DependencyInjector;
-import com.yyyjobs.android.App;
+import com.testapp.android.App;
 
 import java.io.File;
 import java.io.IOException;
@@ -191,5 +192,11 @@ public class AppModule implements Common {
                 .customLogger(new L())
                 .build();
         return new JobManager(mApp, configuration);
+    }
+
+    @Provides
+    @Singleton
+    public UserModel userModel() {
+        return new UserModel(mApp);
     }
 }

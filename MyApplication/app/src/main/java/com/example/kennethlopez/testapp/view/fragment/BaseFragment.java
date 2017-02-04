@@ -5,26 +5,19 @@ import android.app.Fragment;
 import android.os.Bundle;
 
 import com.example.kennethlopez.testapp.di.component.ActivityComponent;
-import com.example.kennethlopez.testapp.di.component.AppComponent;
 import com.example.kennethlopez.testapp.di.component.DaggerActivityComponent;
-import com.example.kennethlopez.testapp.di.component.DaggerAppComponent;
-import com.yyyjobs.android.App;
+import com.testapp.android.App;
 
 public class BaseFragment extends Fragment {
 
-//    private ActivityComponent mComponent;
-
-    private AppComponent mComponent;
+    private ActivityComponent mComponent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        mComponent = DaggerActivityComponent.builder()
-//                .appComponent(getApp().getAppComponent())
-//                .build();
-
-        mComponent = DaggerAppComponent.builder()
+        mComponent = DaggerActivityComponent.builder()
+                .appComponent(getApp().getAppComponent())
                 .build();
     }
 
@@ -32,11 +25,7 @@ public class BaseFragment extends Fragment {
         return (App) getActivity().getApplicationContext();
     }
 
-    public AppComponent getComponent() {
+    public ActivityComponent getComponent() {
         return mComponent;
     }
-
-//    public ActivityComponent getComponent() {
-//        return mComponent;
-//    }
 }

@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="button_white_end_gradient">#ffffff</color>
+    <color name="border_orange">#f5933f</color>
+    <color name="light_gray">#aaaaaa</color>
+    <color name="hint_text_color">#B0B0B0</color>
 </resources>
